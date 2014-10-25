@@ -5,8 +5,26 @@
     <title>Offline map for EPUB 3</title>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js">/*jQuery*/</script>
     <script type="text/javascript" src="js/underscore-min.js">/*Underscore*/</script>
+    <script type="text/javascript" src="js/svg-pan-zoom.js">/*svg-pan-zoom*/</script>
+  	<script type="text/javascript">
+  		$(window).load(function() {
+    		svgPanZoom('#map', {
+				zoomEnabled: true,
+				controlIconsEnabled: true,
+				fit: true,
+				center: true
+			});
+		});
+  	</script>
+  	<style type="text/css">
+  		embed {
+  			width: 500px;
+  			height: 500px;
+  			border:1px solid black;
+  		}
+  	</style>
   </head>
   <body>
-    <embed src="san_francisco.svg"/>
+		<embed id="map" type="image/svg+xml" src="img/san_francisco.svg" />
   </body>
 </html>
