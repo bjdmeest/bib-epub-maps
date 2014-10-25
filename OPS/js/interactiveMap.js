@@ -2,12 +2,13 @@ $.fn.interactiveMap = function() {
     
     //returns the coordinates of the map's corners
     function getMapsCornersCoordinates() {
+      var $bounds = this.getSVGDocument().find('metadata bounds');
     	//static return
     	return {
-    		"minlat": "37.7643",
-    		"minlon": "-122.4785",
-    		"maxlat": "37.8093",
-    		"maxlon": "-122.4064"
+    		"minlat": bounds.attr('minlat'),
+    		"minlon": bounds.attr('minlon'),
+    		"maxlat": bounds.attr('maxlat'),
+    		"maxlon": bounds.attr('maxlon')
     	}
 	}
 	
@@ -32,4 +33,10 @@ $.fn.interactiveMap = function() {
 			left: position["y"]
 		}, 1000);
 	}
+  
+  this.center = function(position) {
+    
+  };
+  
+  return this;
 };

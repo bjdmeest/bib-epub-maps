@@ -6,6 +6,8 @@
     <script type="text/javascript" src="js/jquery-2.1.1.min.js">/*jQuery*/</script>
     <script type="text/javascript" src="js/underscore-min.js">/*Underscore*/</script>
     <script type="text/javascript" src="js/svg-pan-zoom.js">/*svg-pan-zoom*/</script>
+    <script type="text/javascript" src="js/interactiveMap.js">/*Polling locator*/</script>
+    <script type="text/javascript" src="locator.js">/*Polling locator*/</script>
   	<script type="text/javascript">
   		$(window).load(function() {
     		svgPanZoom('#map', {
@@ -14,6 +16,10 @@
 				fit: true,
 				center: true
 			});
+            var interactiveMap = $('#map').interactiveMap();
+            locator.getPosition({}, function(position) {
+                interactiveMap.center(position);
+            });
 		});
   	</script>
   	<style type="text/css">
