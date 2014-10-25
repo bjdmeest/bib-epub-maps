@@ -9,7 +9,8 @@
     <manifest>
         <item id="TOC" href="toc.xhtml" properties="nav" media-type="application/xhtml+xml" />
 	<item id="svg-pan-zoom" href="js/svg-pan-zoom.js" media-type="text/javascript"/>
-	<item id="widget" href="main.html" media-type="application/xhtml+xml"/>
+	<item id="widget" href="main.xhtml" media-type="application/xhtml+xml"/>
+	<item id="sf-map" href="san_francisco.svg" media-type="image/svg+xml"/>
     </manifest>
     <spine>
       <itemref idref="widget"/>
