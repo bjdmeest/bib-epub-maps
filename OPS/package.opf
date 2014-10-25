@@ -8,13 +8,16 @@
     </metadata>
     <manifest>
         <item id="TOC" href="toc.xhtml" properties="nav" media-type="application/xhtml+xml" />
-	<item id="svg-pan-zoom" href="js/svg-pan-zoom.js" media-type="text/javascript"/>
-	<item id="jquery" href="js/jquery-2.1.1.min.js" media-type="text/javascript"/>
-	<item id="underscore" href="js/underscore-min.js" media-type="text/javascript"/>
-	<item id="widget" href="main.xhtml" media-type="application/xhtml+xml" properties="svg scripted"/>
-	<item id="sf-map" href="san_francisco.svg" media-type="image/svg+xml"/>
+        <item id="locator" href="locator.js" media-type="text/javascript" />
+        <item id="svg-pan-zoom" href="js/svg-pan-zoom.js" media-type="text/javascript"/>
+        <item id="jquery" href="js/jquery-2.1.1.min.js" media-type="text/javascript"/>
+        <item id="underscore" href="js/underscore-min.js" media-type="text/javascript"/>
+        <item id="widget" href="main.xhtml" media-type="application/xhtml+xml" properties="svg scripted"/>
+        <item id="sf-map" href="img/san_francisco.svg" media-type="image/svg+xml"/>
+        <item id="interactive-map" href="js/interactiveMap.js" media-type="text/javascript"/>
+        <item id="marker" href="img/marker.gif" media-type="image/gif"/>
     </manifest>
     <spine>
-      <itemref idref="widget"/>
+        <itemref idref="widget"/>
     </spine>
 </package>
