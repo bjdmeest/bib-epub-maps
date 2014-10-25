@@ -10,13 +10,13 @@
     <script type="text/javascript" src="locator.js">/*Polling locator*/</script>
   	<script type="text/javascript">
   		$(window).load(function() {
-    		svgPanZoom('#map', {
+    		panZoomMap = svgPanZoom('#map', {
 				zoomEnabled: true,
 				controlIconsEnabled: true,
 				fit: true,
 				center: true
 			});
-            var interactiveMap = $('#map').interactiveMap();
+            var interactiveMap = $('#map').interactiveMap(panZoomMap);
             locator.getPosition({}, function(position) {
                 interactiveMap.center(position);
             });

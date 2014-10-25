@@ -1,4 +1,4 @@
-$.fn.interactiveMap = function() {
+$.fn.interactiveMap = function(panZoomMap) {
     
     //returns the coordinates of the map's corners
     function getMapsCornersCoordinates() {
@@ -34,9 +34,14 @@ $.fn.interactiveMap = function() {
 		}, 1000);
 	}
   
-  this.center = function(position) {
-    
-  };
+	this.center = function(position) {
+		//position.coords.longitude
+		//position.coords.latitude
+		
+		//console.log(panZoomMap.getPan());
+		
+		//panZoomMap.zoomAtPoint(2, {x: 250, y: 250});
+	};
   
   return this;
 };
